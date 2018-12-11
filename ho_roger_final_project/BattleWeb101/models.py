@@ -22,6 +22,11 @@ class Grid(models.Model):
     grid_x = models.IntegerField()
     grid_y = models.IntegerField()
 
+    def __str__(self):
+        return "Player: %s,  Player_ID: %s   (grid_x: %s, grid_y: %s)" \
+               % (self.player.player_name, self.player.player_id, self.grid_x, self.grid_y)
+
     class Meta:
         ordering = ['grid_x', 'grid_y']
+        unique_together = (('player', 'grid_x', 'grid_y'),)
 
