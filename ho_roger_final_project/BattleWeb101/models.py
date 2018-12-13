@@ -9,6 +9,8 @@ class Player(models.Model):
     player_bullets = models.IntegerField(default=3)
     player_hit_points = models.IntegerField(default=20)
     player_suncker_points = models.IntegerField(default=0)
+    player_total_shots = models.IntegerField(default=0)
+    player_total_hits = models.IntegerField(default=0)
 
     def __str__(self):
         return "Name: %s. ID: %s" % (self.player_name, self.player_id)
@@ -29,4 +31,16 @@ class Grid(models.Model):
     class Meta:
         ordering = ['grid_x', 'grid_y']
         unique_together = (('player', 'grid_x', 'grid_y'),)
+
+
+class AttackedHistory(models.Model):
+    attacker_id = models.ForeignKey(Player, related_name='attacker', on_delete=models.PROTECT)
+    victim_id = models.ForeignKey(Player, related_name='victim', on_delete=models.PROTECT)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "AttackerID: %s  -  VictimID: %s" % (self.attacker_id, self .victim_id)
+
+    class Meta:
+        unique_together = (("attacker_id", "victim_id"),)
 
