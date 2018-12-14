@@ -48,13 +48,16 @@ class Grid(models.Model):
 
 
 class AttackedHistory(models.Model):
-    attacker_id = models.ForeignKey(Player, related_name='attacker', on_delete=models.PROTECT)
-    victim_id = models.ForeignKey(Player, related_name='victim', on_delete=models.PROTECT)
-    created_at = models.DateTimeField(auto_now_add=True)
+    attacker = models.ForeignKey(Player, related_name='attacker', on_delete=models.PROTECT)
+    victim = models.ForeignKey(Player, related_name='victim', on_delete=models.PROTECT)
+    created_time = models.DateTimeField(auto_now_add=True)
+    hit = models.BooleanField(default=False)
+    grid_x_hit = models.IntegerField(null=True)
+    grid_y_hit = models.IntegerField(null=True)
 
     def __str__(self):
-        return "AttackerID: %s  -  VictimID: %s" % (self.attacker_id, self .victim_id)
+        return "Attacker Info: %s  -  Victim Info: %s" % (self.attacker, self .victim)
 
     class Meta:
-        unique_together = (("attacker_id", "victim_id"),)
+        unique_together = (("attacker", "victim"),)
 

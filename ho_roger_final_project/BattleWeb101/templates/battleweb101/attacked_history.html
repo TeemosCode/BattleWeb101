@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>!!!Attacked History!!!</h1>
+
+    <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Attackee</th>   <th>Attacked Time</th> <th>Attack Hit</th> <th>Grid X Hit</th> <th>Grid Y Hit</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for attack in list_of_attacks %}
+              <tr style="color: blue;">
+                <td>{{attack.attacker.player_name}}</td>
+                <td>{{attack.created_time}}</td>
+                  {% if attack.hit %}
+                      <td>Hit!!!</td>
+                      <td>{{ attack.grid_x_hit }}</td>
+                      <td>{{ attack.grid_y_hit }}</td>
+                  {% else %}
+                      <td>Missed!</td>
+                  {% endif %}
+              </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

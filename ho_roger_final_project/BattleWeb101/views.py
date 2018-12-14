@@ -117,3 +117,17 @@ class HallOfFame(View):
         return render(request, 'battleweb101/HallOfFame.html', context=context)
 
 
+class ViewAttackedHistory(View):
+    """
+    This view is associated with each individual player
+    """
+    def get(self, request):
+        # Currently still associated with hardcoded code - Teemo
+        player_self_object = Player.objects.get(player_name="Teemo")
+        list_of_attacks = AttackedHistory.objects.filter(victim=player_self_object).order_by('-created_time')
+        context = {
+            'list_of_attacks': list_of_attacks
+        }
+        return render(request, 'battleweb101/attacked_history.html', context=context)
+
+
