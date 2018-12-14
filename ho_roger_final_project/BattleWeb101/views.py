@@ -27,7 +27,14 @@ class RandomSearchForOpponent(View):
 
     def get(self, request):
         # Hard code during initial development to exclude the player him/ herself, don't want players hitting themselves
-        player_query_list = Player.objects.exclude(player_name='Teemo')
+        self_excluded_player_query_list = Player.objects.exclude(player_name='Teemo').exclude()
+        # .... Are there any better ways???
+        # Making sure not to find a player that has already been sunk. (No more grids within the grid table for him/her)
+        player_query_list = []
+        for player in self_excluded_player_query_list:
+            if Grid.objects.filter(player__player_name=player.player_name).count() != 0:
+                player_query_list.append(player)
+
         rand_index = random.randint(0, len(player_query_list) - 1)
         opponent = player_query_list[rand_index]
 
