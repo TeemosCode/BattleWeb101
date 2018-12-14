@@ -43,7 +43,7 @@ class Grid(models.Model):
                % (self.player.player_name, self.player.player_id, self.grid_x, self.grid_y)
 
     class Meta:
-        ordering = ['grid_x', 'grid_y']
+        ordering = ['player', 'grid_x', 'grid_y']
         unique_together = (('player', 'grid_x', 'grid_y'),)
 
 
@@ -58,6 +58,8 @@ class AttackedHistory(models.Model):
     def __str__(self):
         return "Attacker Info: %s  -  Victim Info: %s" % (self.attacker, self .victim)
 
-    class Meta:
-        unique_together = (("attacker", "victim"),)
+    # This is uncommneted only when the version of the game no longer allows the same person to attack the same victim
+    # within the same day...
+    # class Meta:
+    #     unique_together = (("attacker", "victim"),)
 

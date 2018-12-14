@@ -7,7 +7,7 @@ from BattleWeb101.views import (
     HallOfSunckers,
     HallOfFame,
     ViewAttackedHistory,
-    # Attack
+    Attack
 )
 
 urlpatterns = [
@@ -17,5 +17,5 @@ urlpatterns = [
     path('Hall_Of_SUnCKERS/', HallOfSunckers.as_view(), name='hall_of_sunckers_urlpattern'),
     path('hall_of_fame/', HallOfFame.as_view(), name='hall_of_fame_urlpattern'),
     path('attacked_history/', ViewAttackedHistory.as_view(), name='attack_history_urlpattern'),
-    # path('attack/', Attack.as_view(), name='attack_urlpattern'), # TBI
+    path('attack/', Attack.as_view(), name='attack_urlpattern'),
 ]

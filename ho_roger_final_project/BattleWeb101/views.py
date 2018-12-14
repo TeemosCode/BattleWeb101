@@ -57,6 +57,7 @@ class RenewEverydayData(View):
         return player_instances
 
     def renew_player_daily_data(self):
+        # Reset these two fields back to their defaults <-- Great design here!
         player_daily_bullets = Player._meta.get_field('player_bullets').get_default()
         player_daily_hit_points = Player._meta.get_field('player_hit_points').get_default()
         player_instance_list = self.find_all_players()
@@ -124,10 +125,80 @@ class ViewAttackedHistory(View):
     def get(self, request):
         # Currently still associated with hardcoded code - Teemo
         player_self_object = Player.objects.get(player_name="Teemo")
+
         list_of_attacks = AttackedHistory.objects.filter(victim=player_self_object).order_by('-created_time')
         context = {
             'list_of_attacks': list_of_attacks
         }
         return render(request, 'battleweb101/attacked_history.html', context=context)
+
+
+class Attack(View):
+    """
+    Used to attack a random searched user.
+    Yet because it is still currently under development, we will hard code the target ID and attacker first, as well
+    as the grid_x and grid_y coordinates.
+    Would need to add any activity to the Attack History!
+    """
+    # It should be POST...
+    # But right now we use GET to test first since everything is hardcoded
+    def get(self, request):
+
+        # Victim hard coded to be Karthus
+        victim = Player.objects.get(player_name="Karthus")
+        # The attacker will still be Teemo - Hard coded
+        attacker = Player.objects.get(player_name="Teemo")
+
+        # Attacker has no more bullets to shoot...
+        if attacker.player_bullets == 0:
+            print(attacker.player_name + " Has no more bullets left!")
+            return render(request, 'battleweb101/home.html')
+
+        hit = True
+        attacker.player_total_shots += 1
+        attacker.player_bullets -= 1
+
+        current_attack_history = AttackedHistory()
+
+        # Hard coded coordinates for attack
+        x = 1
+        y = 2
+
+        # Check if hit <---- Still hard Coded Below!! (WOuld we grab the Player Object (Like currently)? Player Name ? or Player ID???)
+        attacked_result = Grid.objects.filter(player=victim, grid_x=x, grid_y=y)
+        # If length is 0, it means it hit nothing (The victim does not have that grid_x & grid_y)
+        if len(attacked_result) == 0:
+            hit = False
+        else: # HIT!!!
+
+            attacker.player_total_hits += 1
+            victim.player_hit_points -= 1
+            current_attack_history.grid_x_hit = x
+            current_attack_history.grid_y_hit = y
+            current_attack_history.hit = True
+
+            # Delete the hit grid of the victim
+            Grid.objects.filter(player=victim, grid_x=x, grid_y=y).delete()
+
+            # Check if victim is sunck...
+            if victim.player_hit_points == 0:
+                victim.player_suncker_points += 1
+                # There could also be a SuNCKER KING UPDATE HERE lol...
+
+        current_attack_history.victim = victim
+        current_attack_history.attacker = attacker
+        current_attack_history.save()
+        attacker.save()
+        victim.save()
+
+        context = {
+            'hit': hit,
+            'x': x,
+            'y': y,
+            'victim': victim,
+            'attacker': attacker
+        }
+
+        return render(request, 'battleweb101/attack_result.html', context=context)
 
 

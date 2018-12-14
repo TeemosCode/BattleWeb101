@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cca5c13-0374-4c36-9ba7-b250b5e0b1d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/migrations/0006_auto_20181214_0905.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleWeb101/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleWeb101/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/urls.py" afterDir="false" />
@@ -28,29 +29,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Django Console" value="1430" />
-          <entry key="html" value="703" />
-          <entry key="py" value="7104" />
-          <entry key="py@ho_roger_final_project" value="764" />
+          <entry key="Django Console" value="1565" />
+          <entry key="html" value="1047" />
+          <entry key="py" value="9382" />
+          <entry key="py@ho_roger_final_project" value="774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CommandLine" value="666" />
-          <entry key="HTML" value="703" />
+          <entry key="CommandLine" value="676" />
+          <entry key="HTML" value="1047" />
           <entry key="PLAIN_TEXT" value="98" />
-          <entry key="Python" value="8534" />
+          <entry key="Python" value="10947" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="6" />
+          <entry key="html" value="7" />
           <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="6" />
+          <entry key="HTML" value="7" />
           <entry key="Python" value="7" />
         </counts>
       </usages-collector>
@@ -82,12 +83,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleWeb101/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="219">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1544771902617" expanded="true" signature="1146:1272" ph="..." />
-                <marker date="1544771902617" expanded="true" signature="1940:2502" ph="..." />
+                <marker date="1544778652052" expanded="true" signature="1146:1272" ph="..." />
+                <marker date="1544778652052" expanded="true" signature="1950:2664" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,14 +97,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+            <state relative-caret-position="131">
+              <caret line="167" column="74" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
-                <marker date="1544771528291" expanded="true" signature="2014:2384" ph="..." />
-                <marker date="1544771528291" expanded="true" signature="3738:3747" ph="..." />
-                <marker date="1544771528291" expanded="true" signature="4573:5083" ph="..." />
+                <marker date="1544778705353" expanded="true" signature="2093:2463" ph="..." />
+                <marker date="1544778705353" expanded="true" signature="3817:3826" ph="..." />
+                <marker date="1544778705353" expanded="true" signature="5182:7651" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -139,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -152,18 +162,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -182,6 +180,7 @@
     <findStrings>
       <find>created_at</find>
       <find>filter</find>
+      <find>Grid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,10 +196,11 @@
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html" />
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html" />
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/urls.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/views.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/models.py" />
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/urls.py" />
+        <option value="$PROJECT_DIR$/BattleWeb101/models.py" />
+        <option value="$PROJECT_DIR$/BattleWeb101/views.py" />
       </list>
     </option>
   </component>
@@ -432,6 +432,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -442,44 +466,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BattleWeb101/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="219">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1544771902617" expanded="true" signature="1146:1272" ph="..." />
-            <marker date="1544771902617" expanded="true" signature="1940:2502" ph="..." />
+            <marker date="1544778652052" expanded="true" signature="1146:1272" ph="..." />
+            <marker date="1544778652052" expanded="true" signature="1950:2664" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+        <state relative-caret-position="131">
+          <caret line="167" column="74" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <marker date="1544771528291" expanded="true" signature="2014:2384" ph="..." />
-            <marker date="1544771528291" expanded="true" signature="3738:3747" ph="..." />
-            <marker date="1544771528291" expanded="true" signature="4573:5083" ph="..." />
+            <marker date="1544778705353" expanded="true" signature="2093:2463" ph="..." />
+            <marker date="1544778705353" expanded="true" signature="3817:3826" ph="..." />
+            <marker date="1544778705353" expanded="true" signature="5182:7651" ph="..." />
           </folding>
         </state>
       </provider>
