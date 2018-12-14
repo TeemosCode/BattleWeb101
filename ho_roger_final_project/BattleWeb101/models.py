@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import F
 from django.urls import reverse
 
 
@@ -11,6 +12,19 @@ class Player(models.Model):
     player_suncker_points = models.IntegerField(default=0)
     player_total_shots = models.IntegerField(default=0)  # All historical shots the player has made since his first shot
     player_total_hits = models.IntegerField(default=0)  # Shots that actually hit
+    player_accuracy = models.DecimalField(default=0.000, max_digits=6, decimal_places=3)  # 0.000 This field is COOL!!!
+
+    def save(self):
+        # Save the calculated derived data (This is the shitty part about Django ORM...) in a % floating point way
+        # Add the "%" during the front end view display...
+
+        # Avoid ZeroDivisionError: division by zero Error!
+        if self.player_total_shots == 0:
+            self.player_accuracy = 0.000
+        else:
+            self.player_accuracy = self.player_total_hits / self.player_total_shots
+
+        super(Player, self).save()
 
     def __str__(self):
         return "Name: %s. ID: %s" % (self.player_name, self.player_id)

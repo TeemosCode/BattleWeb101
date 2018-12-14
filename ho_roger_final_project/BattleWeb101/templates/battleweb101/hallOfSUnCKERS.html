@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>HALL OF SUCKERS!</h1>
+
+    <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Player Name</th>   <th>Player SUnCKER Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in suncker_player_list %}
+              <tr style="color: blue;">
+                <td>{{player.player_name}}</td>
+                <td>{{player.player_suncker_points}}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

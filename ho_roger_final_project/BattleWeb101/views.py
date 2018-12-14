@@ -27,7 +27,7 @@ class RandomSearchForOpponent(View):
 
     def get(self, request):
         # Hard code during initial development to exclude the player him/ herself, don't want players hitting themselves
-        self_excluded_player_query_list = Player.objects.exclude(player_name='Teemo').exclude()
+        self_excluded_player_query_list = Player.objects.exclude(player_name='Teemo')
         # .... Are there any better ways???
         # Making sure not to find a player that has already been sunk. (No more grids within the grid table for him/her)
         player_query_list = []
@@ -93,5 +93,27 @@ class RenewEverydayData(View):
         return HttpResponse("Daily data for update updated within the database successfully!")
 
 
+class HallOfSunckers(View):
+    number_of_sunckers_to_display = 10
+
+    def get(self, request):
+        suncker_player_list_descending_order = Player.objects.all().exclude(player_suncker_points=0).\
+            order_by('-player_suncker_points')
+        context = {
+            # Get the top N of sunckers
+            'suncker_player_list': suncker_player_list_descending_order[:self.number_of_sunckers_to_display]
+        }
+        return render(request, 'battleweb101/hallOfSUnCKERS.html', context=context)
+
+
+class HallOfFame(View):
+    number_of_fames_to_display = 10
+
+    def get(self, request):
+        list_of_fames_descending_order = Player.objects.all().exclude(player_accuracy=0.000).order_by('-player_accuracy')
+        context = {
+            'hall_of_fame_list': list_of_fames_descending_order
+        }
+        return render(request, 'battleweb101/HallOfFame.html', context=context)
 
 
