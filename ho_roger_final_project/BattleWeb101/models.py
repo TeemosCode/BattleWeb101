@@ -9,8 +9,8 @@ class Player(models.Model):
     player_bullets = models.IntegerField(default=3)
     player_hit_points = models.IntegerField(default=20)
     player_suncker_points = models.IntegerField(default=0)
-    player_total_shots = models.IntegerField(default=0)
-    player_total_hits = models.IntegerField(default=0)
+    player_total_shots = models.IntegerField(default=0)  # All historical shots the player has made since his first shot
+    player_total_hits = models.IntegerField(default=0)  # Shots that actually hit
 
     def __str__(self):
         return "Name: %s. ID: %s" % (self.player_name, self.player_id)
