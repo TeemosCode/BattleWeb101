@@ -1,3 +1,64 @@
+{% extends 'display_base.html' %}
+{% load static %}
+
+{% block sub_additional_links%}
+  <link rel='stylesheet' type="text/css" href="{% static 'battleweb101/registration_checkbox.css' %}">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <script>
+    // This javascript is used to prevent users from backing user the browser back button to its prevous history
+    // of the same target. It forces the page to reload once it has been navigated to trough the browser history,
+    // making sure that it will always call on the random access function within the server so that players would
+    // not be able to focus hitting on the same victim!
+        window.addEventListener( "pageshow", function ( event ) {
+          var historyTraversal = event.persisted ||
+                                 ( typeof window.performance != "undefined" &&
+                                      window.performance.navigation.type === 2 );
+          if ( historyTraversal ) {
+            // Handle page restore.
+            window.location.reload();
+          }
+        });
+    </script>
+
+{% endblock %}
+
+{% block title %}  BattleWeb101 Opponent {% endblock %}
+
+{% block content-body %}
+
+<div class="container col-md-6 col-lg-8 col-xl-6 mb-8" id="whiteboard_context" style="background-color: white; "><!-- text-center   height: 500px-->
+<h2 class="text-center" style="margin-top: 5px; margin-bottom: 5px;"> Your Account Status </h2>
+
+        <div class="col-md-2"></div>
+
+
+        <div class="col-md-8 whiteboard_content text-center">
+            {% if hit %}
+                <h1>HIT!!! <br>coordinate X: {{ x }}, coordinate Y: {{ y }}</h1>
+                <br>
+                {% if victim.player_hit_points == 0 %}
+                    <h2> <span style="color: orangered"> SUNK {{ victim.player_name }}!!!! Woohoo!</span></h2>
+                {% else %}
+                    {{ victim.player_name }} has only <span style="color: mediumspringgreen">'{{ victim.player_hit_points }}'</span> hit points left!<br>
+                {% endif %}
+            {% else %}
+                <span style="color: sandybrown"> <h3>You MISSSSSSS!</h3> </span>
+            {% endif %}
+            <a href="{% url 'search_opponent_urlpattern' %}"><button class="btn btn-primary">Search for another Opponent - GO!</button></a><br>
+            <a href="{% url 'home_urlpattern' %}"> <button class="btn btn-success">Back to Arsenal</button></a>
+        </div>
+
+        <div class="col-md-2"></div>
+
+</div>
+{% endblock %}
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,3 +87,16 @@
 <h5><a href="{% url 'search_opponent_urlpattern' %}">Search for another Opponent - GO!</a></h5>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

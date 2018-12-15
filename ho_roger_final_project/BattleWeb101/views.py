@@ -49,7 +49,8 @@ def sign_up(request):
         # email.send()
         # return render(request, 'battleweb101/account_activation_email.html')
         print("Signed Up with email: " + user.email)
-        return HttpResponse("Please go to your email to activate your BattleWeb101 account!")
+        return HttpResponse("Please go to your provided email to activate your BattleWeb101 account!")
+        # return HttpResponseRedirect('/home')
     else:
         form = UserInfoForm()
 
@@ -81,7 +82,13 @@ def activate(request, uidb64, token):
         return HttpResponse('Activation link is invalid!')
 
 
-class Home(View):
+class Index(View):
+
+    def get(self, request):
+        return render(request, 'battleweb101/root.html')
+
+
+class Home(LoginRequiredMixin, View):
 
     def get(self, request):
         return render(request, 'battleweb101/home.html')
@@ -292,3 +299,10 @@ class PlayerStatus(LoginRequiredMixin, View):
             'player': player
         }
         return render(request, 'battleweb101/player_status.html', context=context)
+
+
+class UI(View):
+
+    def get(self,request):
+        print(request.user.username)
+        return render(request, 'battleweb101/root.html')

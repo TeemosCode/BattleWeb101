@@ -2,6 +2,7 @@ from django.urls import path
 from django.conf.urls import url
 
 from BattleWeb101.views import (
+    Index,
     Home,
     RandomSearchForOpponent,
     RenewEverydayData,
@@ -10,6 +11,7 @@ from BattleWeb101.views import (
     ViewAttackedHistory,
     Attack,
     PlayerStatus,
+    UI,
 
     sign_up,
     activate,
@@ -18,6 +20,7 @@ from BattleWeb101.views import (
 # app_name = 'BattleWeb101'
 
 urlpatterns = [
+    path('index/', Index.as_view(), name='index_urlpattern'),
     path('home/', Home.as_view(), name='home_urlpattern'),
     path('random_search_opponent/', RandomSearchForOpponent.as_view(), name="search_opponent_urlpattern"),
     path('daily_update/', RenewEverydayData.as_view()),
@@ -33,4 +36,5 @@ urlpatterns = [
 
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         activate, name='activate'),
+    path('testUI/', UI.as_view(), name='testui_urlpattern'),
 ]

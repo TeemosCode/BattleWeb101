@@ -1,13 +1,26 @@
+{% load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BattleWeb101 Hall Of Sunckers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    <h1>HALL OF SUCKERS!</h1>
 
-    <table class="table table-hover table-striped">
+
+
+
+<a href = '{% url "home_urlpattern" %}'>Back to Arsenal</a>
+
+<div class="jumbotron" style="height: 100%">
+    <div class="container">
+      <h2><h1>HALL OF SUCKERS!</h1></h2>
+      <div class="table-responsive">
+      <table class="table table-hover table-striped">
         <thead>
           <tr>
             <th>Player Name</th>   <th>Player SUnCKER Points</th>
@@ -21,7 +34,10 @@
               </tr>
           {% endfor %}
         </tbody>
-    </table>
+      </table>
+      </div>
+    </div>
+</div>
 
 </body>
 </html>

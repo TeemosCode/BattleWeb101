@@ -1,0 +1,101 @@
+	    	body {
+	    		background-color: #13294b !important;
+	    	}
+	    	/*Display iSchool picture as background*/
+		    .jumbotron {
+			  background-image: url('./target_hit.jpg');
+			  background-size: cover;
+  			  margin-bottom: 0 !important;
+  			  height: 85vh;
+/*  			  width: 25vw;*/
+	
+			}
+			/*Getting rid of extra whitespace margin on the bottom of the navigation bar*/
+			.navbar{
+			margin-bottom: 0 !important;
+			border: 0 !important;
+			padding: 0 !important;
+			}
+
+			.container-fluid {
+				padding: 0 !important;
+			}
+
+			.container {
+				margin: 0 0 0 0 !important;
+
+				width: 100vw !important;
+			}
+
+			footer {
+				margin: 0 0 0 0 !important;
+				padding: 0 0 0 0 !important;
+			}
+
+			strong {
+				font-size: 20px;
+			}
+
+			/* Style all font awesome icons */
+			.fa {
+			    padding: 15px;
+			    font-size: 30px;
+			    width: 50px;
+			    text-align: center;
+			    text-decoration: none;
+			    border-radius: 50%;
+			}
+
+			/* Add a hover effect if you want */
+			.fa:hover {
+			    opacity: 0.7;
+			}
+			/* Facebook */
+			.fa-facebook {
+			    background: #3B5998;
+			    color: white;
+			    border: solid;
+
+			}
+			/*LinkedIn*/
+			.fa-linkedin {
+			    background: #007bb6;
+			    color: white;
+			    border: solid;
+
+			}
+/*			.row { 
+				width: 100vw;  make the row span across the whole screen width (view width)
+				margin: 0 0 0 0 !important;
+			}*/
+			.fa-github {
+				background: white;
+			    color: black;
+			    border: solid;
+			    border-color: orange;
+
+			}
+
+			#linkedin-footer {
+				background: #FF8800;
+				border: solid;
+				color: grey;
+			    text-align: center;
+			    text-decoration: none;
+			    border-radius: 20%;
+			    border: solid;
+
+			}
+
+			#rogers_email {
+				background: #FF8800;
+				border: solid;
+				color: white;
+			    text-align: center;
+			    text-decoration: none;
+			    border-radius: 100%;
+			}
+
+			#rogers_border {
+				padding: 0 0 0 0 !important;
+			}

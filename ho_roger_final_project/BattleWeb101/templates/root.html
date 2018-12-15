@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!--     	<meta charset="utf-8">	
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<link rel = 'stylesheet' type='text/css' href="{% static 'battleweb101/root_base.css' %}">
+		<link rel = 'stylesheet' type = 'text/css' href = "{% static 'battleweb101/session_info_display.css' %}">
+		<link rel = 'stylesheet' type = 'text/css' href = "{% static 'battleweb101/bootstrap-social.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% block more_links %} {% endblock %}
+
+		<title>
+            {% block title %}
+                BattleWeb101
+		    {% endblock %}
+        </title>
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-inverse container-fluid">
+		  <div class="container-fluid">
+
+		    <div class="navbar-header" style="margin-left: 15px;">
+		      <a class="navbar-brand" href="/">BattleWeb101</a>
+		    </div>
+            {% block navbar %}
+    		    <ul class="nav navbar-nav navbar-right" style="margin-right: 0;">
+    				{% if request.user.is_authenticated %}
+    					<li><a href='/logout'><span class="glyphicon glyphicon-log-out"><span style = "font-size: 20px">LogOut</span></a></li>
+    				{% else %}
+    					<li><a href="{% url 'signup_urlpattern' %}"><span class="glyphicon glyphicon-user"></span> Create Account</a></li>
+    					<li><a href="{% url 'login_urlpattern' %}"><span class="glyphicon glyphicon-log-in"></span> LogIn</a></li>
+    				{% endif %}
+    		    </ul>
+            {% endblock %}
+		  </div>
+		</nav>
+
+	
+		<div class = "container-fluid page-container">
+			<div class="jumbotron" style="background-image: url('../../static/battleweb101/target_hit.jpg');">
+
+                {% block content-body %}
+    				{% if request.user.is_authenticated %}
+    					<div class="row text-center">
+    						<h1><span style = "background-color:#000080; color:#FF8C00; border:solid;">Welcome {{user.username}}!</span></h1> <br>
+    						<a href = '{% url "home_urlpattern"%}'><button type="button" class="btn btn-primary"><span style = "font-size: 20px;">Back to Arsenal!</span></button></a>
+    					</div>
+    				{% else %}
+    					<div class="row text-center">
+    						<h1><span style = "background-color:#000080; color:#FF8C00;">Welcome to Battleweb101 Where everyone can be trigger happy for a day :) </span></h1> <br>
+    					</div>
+    				{% endif %}
+                {% endblock %}
+			</div>
+		</div>   
+<!-- #13294b
+#E84A27 -->
+		{% block footer %}
+            <footer class="page-footer font-small unique-color-dark pt-0">
+                {% block roger %}
+                <div style="background-color: #000080;">
+                    <div id="rogers_border" class="container">
+                        <!--Grid row-->
+                        <div class="row py-4 d-flex align-items-center" style='margin-right: 0;'>
+                            <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                                <h6 class="mb-0 white-text"><span style="color:#FF8800">Creator & Maintainer: Ping-Che (Roger) Ho</h6>
+                            </div>
+                            <!--Grid column-->
+                            <div class="col-md-6 col-lg-7 text-center text-md-right">
+                                <a class="ins-ic" >
+                                    <i class="fa fa-handshake white-text mr-lg-4"> </i>
+                                </a>
+                                <a class="tw-ic">
+                                    <i class="fa fa-handshake white-text mr-lg-4"> </i>
+                                </a>                   
+                                <a class="ins-ic">
+                                    <i class="fa fa-handshake white-text mr-lg-4"> </i>
+                                </a>
+                                <a class="tw-ic">
+                                    <i class="fa fa-handshake white-text mr-lg-4"> </i>
+                                </a>
+                                <a href="mailto:pingche2@illinois.edu"><i class="fa fa-envelope mr-3" id="rogers_email"></i></a>                   
+
+
+            					<a href="https://github.com/TeemosCode/" target = "_blank" class="fa fa-github"></a>
+                                <!--Linkedin-->
+            					<a href="https://www.linkedin.com/in/pingche-roger-ho/" target = "_blank" class="fa fa-linkedin"></a>
+                                <!--Facebook-->
+                                <a class="fb-ic ml-0" target = "_blank" href="https://www.facebook.com/roger.ho.779">
+                                    <i class="fa fa-facebook white-text mr-lg-4"> </i>
+                                    
+                                </a>
+
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+                    </div>
+                </div>
+                {% endblock %}
+                {% block intro%}
+                <!--Footer Links-->
+                <div class="container mt-5 mb-4 text-center text-md-left" style="background-color:#FF8800;">
+                    <div class="row mt-3" style="margin-right: 0;">
+
+                        <!--First column-->
+                        {% block ischool_intro %}
+                        <div class="col-md-3 col-lg-6 col-xl-3 mb-4">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <strong>Title1 For something</strong>
+                            </h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p align = "justify">
+                                Text1 For SOMETHING <-- Adds? Anyone?
+                           	</p>
+                        </div>
+                        {% endblock %}
+                        <!--/.First column-->
+
+
+                        <!--Second column-->
+                        {% block middle_info %}
+
+                       <!--  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"> -->
+                        <div class="col-md-3 col-lg-6 col-xl-3 mb-4">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <strong>Why Practice?</strong>
+                            </h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p align = "justify">You’ll find lots of people, including some highly successful programmers, who rant negatively about this type of interview. But simply deciding not to prepare is foolish. There are pros and cons, but many complaints result from experiences with interviewers or candidates who were emphasizing the wrong things. Done properly, it gives evidence of how well a candidate communicates their thoughts, how they make analytical decisions, how confidently they approach new problems, how reliant they are on copying from examples, and whether they know how to ask clarifying questions. Those are important skills even in non-coding jobs.
+                            <br><br>
+            				This is open to anyone in the iSchool, regardless of degree program or whether you are preparing for a job search. You don’t need a lot of experience with coding and no specific programming languages are required. You can focus more on communications, data structures, and algorithmic thinking than code syntax if you wish. Coding interviews sometimes emphasize finding the optimal algorithm for a problem, as measured by order of complexity of time or memory. That is not the primary concern, but is a secondary goal. You can learn more about complexity in some of our courses like IS590PR, but it isn’t necessary to participate.
+                           	</p>
+                        </div>
+
+                        {% endblock %}
+                        <!--/.Second column-->
+
+
+
+{#                        <!--Third column-->#}
+{#                        {% block adds %}#}
+{#                        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">#}
+{#                            <h6 class="text-uppercase font-weight-bold">#}
+{#                                <strong>Title1 For something</strong>#}
+{#                            </h6>#}
+{#                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">#}
+{#                            <p align = "justify">#}
+{#                                Text1 For SOMETHING <-- Adds? Anyone?#}
+{#                           	</p>#}
+{#                        </div>#}
+{#                        {% endblock %}#}
+{#                        <!--/.Third column-->#}
+
+                    </div>
+                </div>
+                <!--/.Footer Links-->
+                {% endblock %}
+                <!-- Copyright-->
+                <div class="footer-copyright py-3 text-center" style="background-color:#000800;">
+                    <span style="color:antiquewhite">© 2018 Copyright:</span>
+                    <a href="https://github.com/TeemosCode/BattleWeb101" target="_blank">
+                        <strong> <span style="font-size:18px">TeemosCode BattleWeb101</span></strong>
+                    </a>
+                </div>
+                <!--/.Copyright -->
+
+            </footer>
+            <!--/.Footer-->   
+		{% endblock %}
+	</body>
+</html>

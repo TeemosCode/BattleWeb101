@@ -1,3 +1,119 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block more_links %}
+<link rel = 'stylesheet' type='text/css' href="{% static 'battleweb101/login_authentication.css' %}">
+<style>
+  label {color:#E84A27;}
+  div.video_holder {
+/*    background-color: lightblue;*/
+    /*width: 110px;*/
+    height: 500px;
+    overflow: scroll;
+  }
+</style>
+{% endblock %}
+
+
+{% block title %}  BattleWeb101-{{ user.username }}'s Home page{% endblock %}
+{#{% block navbar %} {% endblock %}#}
+
+{% block content-body %}
+
+	<div class="row text-center">
+		<h1><span style = "background-color:#000080; color:#FF8C00; border:solid;">Hello ! {{user.username}}!</span></h1>
+	</div>
+
+
+  <div class="modal-content animate" method='post' style="background-color: white;">
+    {% csrf_token %}
+    <div class="container text-center" style="margin: auto auto 25% auto !important;">
+        <a href='{% url "search_opponent_urlpattern" %}'>
+      	<button type="button" class="btn btn-primary">
+      		<span style="font-size:30px">Search Opponent GO!</span>
+      	</button>
+        </a>
+        <br>
+
+        <br>
+        <a href="{% url 'hall_of_fame_urlpattern' %}">
+            <button type="button" class="btn btn-primary">
+                <span style="font-size:28px">Hall Of Fame</span>
+            </button>
+        </a>
+        <br>
+
+        <br>
+        <a href="{% url 'hall_of_sunckers_urlpattern' %}">
+            <button type="button" class="btn btn-primary">
+                <span style="font-size:30px">Hall of SUnCKERS</span>
+            </button>
+        </a>
+        <br>
+
+        <br>
+        <a href="{% url 'player_status_urlpattern' %}">
+            <button type="button" class="btn btn-primary">
+                <span style="font-size:30px">Player Status</span>
+            </button>
+        </a>
+        <br>
+
+        <br>
+        <a href="{% url 'attack_history_urlpattern' %}">
+            <button type="button" class="btn btn-primary">
+                <span style="font-size:30px">Attacked History</span>
+            </button>
+        </a>
+        <br>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block ischool_intro %}
+	<div class="col-md-6 col-lg-12 col-xl-6 mb-8" >
+	    <h6 class="text-uppercase font-weight-bold">
+	        <strong>What are these coding interviews like, and how should I act?</strong>
+	    </h6>
+	    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	    <p align = "justify">There are many online videos that show one or more solutions to specific whiteboard coding style problems, but most don’t show a realistic interview coding situation. Even worse, some unknowingly show how to interview someone poorly. The best example I have found is this mock interview at Google below. Both participants demonstrate good communication, Edgar “thinks out loud” very well, tries potential solutions visually before writing any code, and together they iterate to improve the solutions.
+	   	</p>
+	   		   	<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+	  <div class="video_holder">
+  	  <iframe width="700" height="400"
+  			src="https://www.youtube.com/embed/XKu_SEDAykw">?rel=0
+  		</iframe>
+  		<br>
+  		<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+  		<span style="text-align: center; font-size: 18px"> Scroll down below for other video links that may provide you furthur insight to whiteboard coding</span>
+  	   	{% if video_links%}
+  			<h4> Videos Links </h4>
+  		    <ul>
+  		    {% for links in video_links %}
+  		        <li><a href="{{ links.url }}" target="_blank">{{ links.video_name }}</a></li>
+  		    {% endfor %}
+  		    </ul>
+  		  {% else %}
+  		    <p>No videos are available.</p>
+  		  {% endif %}
+	  </div>
+
+	</div>
+{% endblock %}
+<!--/.First column-->
+
+{% block middle_info %}
+	<!-- make it empty -->
+{% endblock %}
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,3 +137,6 @@
 
 </body>
 </html>
+
+
+

@@ -1,3 +1,30 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block more_links %}
+<link rel = 'stylesheet' type='text/css' href="{% static 'battleweb101/login_authentication.css' %}">
+{% endblock %}
+
+
+{% block title %}  iSchool Whiteboard Coding-LogIn {% endblock %}
+{% block navbar %} {% endblock %}
+
+{% block content-body %}
+			<!-- {{ form }} -->
+<!-- 	<div>
+		<form method = 'post'>
+			{% csrf_token %}
+
+			NetID: {{ form.username }}
+			Password: {{ form.password }}<br>
+			<input type = 'submit' value = 'login'>
+
+			<p> Not Signed Up yet? <a href = '{% url "signup_urlpattern" %}'> SIGN UP</a> here!</p>
+		</form>
+	</div>
+ -->
+
+
 <h2 style="text-align: right">Login</h2>
   <form class="modal-content animate" method='post' style="background-color: #FF8800; ">
   	{% csrf_token %}
@@ -12,3 +39,10 @@
         <a href = '{% url "password_reset" %}'> <button type="button" class="btn btn-danger"><span>Change Password</button></a>
     </div>
   </form>
+
+
+{% endblock %}
+
+
+
+

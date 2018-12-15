@@ -1,0 +1,116 @@
+{% extends 'root.html' %}
+
+{% block more_links %}
+<style>
+    #whiteboard_context{
+        overflow: auto;
+        height:100%;
+    }
+    .whiteboard_content {
+        background-color: #13294b;
+        color: #E84A27;
+        display: inline-block;
+        border-color: white; 
+        border-radius: 20px;
+        border-right: 3px solid;
+        border-color: white;
+        height: 305px;
+        overflow: auto;
+    }
+
+    .whiteboard_content {
+      font-size: 15px;
+    }
+
+</style>
+    {% block sub_additional_links%} {% endblock %}
+{% endblock %}
+
+
+
+
+
+{% block content-body %}
+<div style="text-align:center; "><span style="background-color: #13294b; color: #E84A27; font-size: 30px; border: solid"> Historical Sessions</span> </div>
+
+
+<div class="container col-md-6 col-lg-8 col-xl-6 mb-8" id="whiteboard_context" style="background-color: white; "><!-- text-center   height: 500px-->
+     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 3px auto; border-color:white; border-style:solid;">
+{% if history_session_info %} 
+ {% for session, seats_remaining, infos in history_session_info %}
+    {% if forloop.counter0|divisibleby:2 %}
+        <div class="col-md-6 whiteboard_content">
+            <br>
+
+            <ul>
+                <li> Date : {{ session.session_date }} </li> 
+                <li> Time : {{ session.session_start_time }} ~ {{session.session_end_time}} </li>
+                <li> Location : {{ session.location }} </li>
+
+                <li>
+                    Seats Conditions<br>
+                    Remaining Seats / Space Limit : {{ seats_remaining }} / {{ session.seat_limits }} 
+                </li>
+
+                <p> 
+{#                    <a href = "{% url  'registration:session_student_info' session.id %}" style="color: white"><button class="btn btn-info">Info :</button></a> </br>#}
+                    {% for info in infos  %}
+                        {{ info }} </br>
+                    {% endfor %}
+                </p>
+            </ul>
+            
+        </div>
+    {% elif not forloop.counter0|divisibleby:2 %}
+    <div class="col-md-6 whiteboard_content">
+            <br>
+
+            <ul>
+                <li> Date : {{ session.session_date }} </li> 
+                <li> Time : {{ session.session_start_time }} ~ {{session.session_end_time}} </li>
+                <li> Location : {{ session.location }} </li>
+
+                <li>
+                    Seats Conditions<br>
+                    Remaining Seats / Space Limit : {{ seats_remaining }} / {{ session.seat_limits }} 
+                </li>
+
+                <p> 
+{#                    <a href = "{% url  'registration:session_student_info' session.id %}" style="color: white"><button class="btn btn-info">Info :</button></a> </br>#}
+                    {% for info in infos  %}
+                        {{ info }} </br>
+                    {% endfor %}
+                </p>
+            </ul>
+    </div>
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+    {% elif forloop.last %}
+    <div class="col-md-6 whiteboard_content">
+            <br>
+
+            <ul>
+                <li> Date : {{ session.session_date }} </li> 
+                <li> Time : {{ session.session_start_time }} ~ {{session.session_end_time}} </li>
+                <li> Location : {{ session.location }} </li>
+
+                <li>
+                    Seats Conditions<br>
+                    Remaining Seats / Space Limit : {{ seats_remaining }} / {{ session.seat_limits }} 
+                </li>
+
+                <p> 
+{#                    <a href = "{% url  'registration:session_student_info' session.id %}" style="color: white"><button class="btn btn-info">Info :</button></a> </br>#}
+                    {% for info in infos  %}
+                        {{ info }} </br>
+                    {% endfor %}
+                </p>
+            </ul>
+    </div>
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 10px auto; border-color:white; border-style:solid;">
+    {% endif %}
+  {% endfor %}
+{% else %}
+    <strong><p>No Historical Sessions Available!</p></strong>
+{% endif %}
+</div>
+{% endblock %}

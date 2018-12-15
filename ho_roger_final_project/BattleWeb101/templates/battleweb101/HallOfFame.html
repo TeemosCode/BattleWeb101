@@ -1,16 +1,29 @@
+{% load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BattleWeb101 Hall Of Fame</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    <h1>~~~~~HALL OF FAME~~~~~</h1>
 
-    <table class="table table-hover table-striped">
+
+
+
+<a href = '{% url "home_urlpattern" %}'>Back to Arsenal</a>
+
+<div class="jumbotron" style="height: 100%">
+    <div class="container">
+      <h2>~~~ Hall of Fame (Top 10 Shooters) ~~~</h2>
+      <div class="table-responsive">
+      <table class="table table-hover table-striped">
         <thead>
           <tr>
-            <th>Player Name</th>   <th>Player Accuracy (x.yz)</th>
+            <th>Player Name</th>   <th>Player Accuracy</th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +34,10 @@
               </tr>
           {% endfor %}
         </tbody>
-    </table>
+      </table>
+      </div>
+    </div>
+</div>
+
 </body>
 </html>

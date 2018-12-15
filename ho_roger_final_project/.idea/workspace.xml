@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cca5c13-0374-4c36-9ba7-b250b5e0b1d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleWeb101/jobs/daily/renew_grid_player_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/static/battleweb101/bootstrap-social.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/static/battleweb101/login_authentication.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/static/battleweb101/registration_checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/static/battleweb101/root_base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/static/battleweb101/session_info_display.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/static/battleweb101/target_hit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/root.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/templates/display_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/templates/root.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleWeb101/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ho_roger_final_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ho_roger_final_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ho_roger_final_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ho_roger_final_project/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,29 +48,33 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="1814" />
-          <entry key="html" value="2623" />
-          <entry key="py" value="12791" />
+          <entry key="css" value="19" />
+          <entry key="html" value="4100" />
+          <entry key="py" value="13147" />
           <entry key="py@ho_roger_final_project" value="881" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CSS" value="19" />
           <entry key="CommandLine" value="783" />
-          <entry key="HTML" value="2623" />
+          <entry key="HTML" value="4100" />
           <entry key="PLAIN_TEXT" value="98" />
-          <entry key="Python" value="14605" />
+          <entry key="Python" value="14961" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="18" />
-          <entry key="py" value="21" />
+          <entry key="css" value="5" />
+          <entry key="html" value="34" />
+          <entry key="py" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="18" />
-          <entry key="Python" value="21" />
+          <entry key="CSS" value="5" />
+          <entry key="HTML" value="34" />
+          <entry key="Python" value="26" />
         </counts>
       </usages-collector>
     </session>
@@ -57,49 +82,48 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ho_roger_final_project/settings.py">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/root.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1282">
-              <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+            <state relative-caret-position="-1363">
+              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
               <folding>
-                <element signature="e#323#332#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/jobs/daily/renew_grid_player_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-                <marker date="1544898039188" expanded="true" signature="546:555" ph="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
               <folding>
-                <element signature="e#649#681#0" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="495">
+              <caret line="33" column="58" lean-forward="true" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,30 +132,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="281">
+              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            <state relative-caret-position="207">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#h1#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <marker date="1544860458068" expanded="true" signature="11646:11655" ph="..." />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -139,21 +169,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            <state relative-caret-position="384">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+              <folding>
+                <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#5;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/display_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#li#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="624">
+              <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/root.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -163,8 +206,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -175,6 +218,20 @@
       <find>Grid</find>
       <find>clean</find>
       <find>LoginRequiredMixin</find>
+      <find>backgroun</find>
+      <find>jum</find>
+      <find>color</find>
+      <find>create</find>
+      <find>instructor</find>
+      <find>login</find>
+      <find>logout</find>
+      <find>ischool whi</find>
+      <find>registra</find>
+      <find>regist</find>
+      <find>session_display</find>
+      <find>registration</find>
+      <find>sign</find>
+      <find>back to</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,24 +241,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BattleWeb101/admin.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html" />
         <option value="$PROJECT_DIR$/BattleWeb101/forms.py" />
         <option value="$PROJECT_DIR$/BattleWeb101/tokens.py" />
         <option value="$PROJECT_DIR$/BattleWeb101/models.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/signup.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html" />
-        <option value="$PROJECT_DIR$/ho_roger_final_project/urls.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/urls.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html" />
-        <option value="$PROJECT_DIR$/BattleWeb101/views.py" />
-        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html" />
-        <option value="$PROJECT_DIR$/ho_roger_final_project/settings.py" />
         <option value="$PROJECT_DIR$/BattleWeb101/jobs/daily/renew_grid_player_data.py" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/static/battleweb101/root_base.css" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/signup.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/root.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/urls.py" />
+        <option value="$PROJECT_DIR$/BattleWeb101/views.py" />
+        <option value="$PROJECT_DIR$/ho_roger_final_project/settings.py" />
+        <option value="$PROJECT_DIR$/ho_roger_final_project/urls.py" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/display_base.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html" />
+        <option value="$PROJECT_DIR$/BattleWeb101/templates/root.html" />
       </list>
     </option>
   </component>
@@ -256,6 +317,19 @@
               <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
               <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="battleweb101" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,6 +359,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BattleWeb101/templates" />
+      <recent name="$PROJECT_DIR$/BattleWeb101/static/battleweb101" />
+      <recent name="$PROJECT_DIR$/BattleWeb101" />
+      <recent name="$PROJECT_DIR$/BattleWeb101/templates/battleweb101" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/BattleWeb101" />
     </key>
@@ -353,17 +433,17 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1990232" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1990232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@ho_roger_final_project" weight="0.19489796" />
+      <window_info anchor="bottom" id="manage.py@ho_roger_final_project" visible="true" weight="0.19489796" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.32969698" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -409,20 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BattleWeb101/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -465,104 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="e#365#418#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda3/envs/IS590WFO_final_project/lib/python3.6/site-packages/django/contrib/auth/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#li#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1544860458068" expanded="true" signature="11646:11655" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="32" />
-          <folding>
-            <element signature="e#649#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,23 +545,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/jobs/daily/renew_grid_player_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1544906921055" expanded="true" signature="546:555" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/static/battleweb101/bootstrap-social.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/static/battleweb101/login_authentication.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/static/battleweb101/registration_checkbox.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/static/battleweb101/session_info_display.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/static/battleweb101/root_base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#1167#1189#0#HTML" expanded="true" />
+            <element signature="e#1260#1299#0#HTML" expanded="true" />
+            <element signature="e#1400#1420#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1544911721461" expanded="true" signature="3215:3304" ph="..." />
+            <marker date="1544911721461" expanded="true" signature="11829:11838" ph="..." />
+            <marker date="1544911721461" expanded="true" signature="12060:12183" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ho_roger_final_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1282">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        <state relative-caret-position="473">
+          <caret line="150" column="17" lean-forward="true" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
           <folding>
             <element signature="e#323#332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/jobs/daily/renew_grid_player_data.py">
+    <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1544898039188" expanded="true" signature="546:555" ph="..." />
+            <element signature="e#649#681#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/hallOfSUnCKERS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/display_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/HallOfFame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attacked_history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="58" lean-forward="true" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/player_status.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#5;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/root.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/opponent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/root.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1363">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/account_activation_email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/attack_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h1#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

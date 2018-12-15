@@ -1,5 +1,98 @@
+{% extends 'display_base.html' %}
+{% load static %}
+
+{% block sub_additional_links%}
+  <link rel='stylesheet' type="text/css" href="{% static 'battleweb101/registration_checkbox.css' %}">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+{% endblock %}
+
+{% block title %}  {{ user.username }} - BattleWeb101 Status {% endblock %}
+
+{% block content-body %}
+{#<div style="text-align:center; ">#}
+{#  <span style="background-color: #13294b; color: #E84A27; font-size: 30px; border: solid">#}
+{#    Your Account Status#}
+{#  </span>#}
+{#</div>#}
+
+<div class="container col-md-6 col-lg-8 col-xl-6 mb-8" id="whiteboard_context" style="background-color: white; "><!-- text-center   height: 500px-->
+<h2 class="text-center" style="margin-top: 5px; margin-bottom: 5px;"> Your Account Status </h2>
+
+        <div class="col-md-6 whiteboard_content">
+           <br>
+
+            <ul>
+                <li>Total Life Left Today: <br>{{ player.player_hit_points }}</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 whiteboard_content">
+           <br>
+
+            <ul>
+                <li> Accuracy: : <br>{{ player.player_accuracy }} </li>
+            </ul>
+        </div>
+
+
+
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+
+        <div class="col-md-6 whiteboard_content">
+           <br>
+
+            <ul>
+                <li>Total Successful Hits: <br>{{ player.player_total_hits }}</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 whiteboard_content">
+           <br>
+
+            <ul>
+                <li>Total Shots Made: <br>{{ player.player_total_shots }}</li>
+            </ul>
+        </div>
+
+
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+
+        <div class="col-md-6 whiteboard_content">
+           <br>
+
+            <ul>
+                <li>SUnCKER Points: <br>{{ player.player_suncker_points }}</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 whiteboard_content">
+           <br>
+
+            <ul>
+                <li>Bullets Left Today: <br>{{ player.player_bullets }}</li>
+            </ul>
+        </div>
+
+
+
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; margin: 2px auto; border-color:white; border-style:solid;">
+
+</div>
+{% endblock %}
+
+
+
+
+
 {{ player }}<br>
 <h5>Player Name: </h5>{{ player.player_name }}<br>
+
+
 <h5>Total Life Left Today: </h5>{{ player.player_hit_points }}<br>
 <h5>Accuracy: </h5>{{ player.player_accuracy }}<br>
 <h5>Bullets Left Today: </h5>{{ player.player_bullets }}<br>

@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 
 # Login info
 LOGIN_URL = reverse_lazy('login_urlpattern')
-LOGIN_REDIRECT_URL = '/'  # User page...
+LOGIN_REDIRECT_URL = '/home'  # User Home page...
 
 # Logout info
 LOGOUT_REDIRECT_URL = '/'

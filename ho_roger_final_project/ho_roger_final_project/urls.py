@@ -22,7 +22,7 @@ from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
 urlpatterns = [
     path('',
          RedirectView.as_view(
-             pattern_name='home_urlpattern',  # Sends to the /home page under the BattleWeb101 app at root url
+             pattern_name='index_urlpattern',  # Sends to the /home page under the BattleWeb101 app at root url
              permanent=False
          )),
 
