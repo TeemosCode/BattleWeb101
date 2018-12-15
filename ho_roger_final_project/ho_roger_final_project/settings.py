@@ -40,6 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BattleWeb101',
+    # pip install django-q
+    'django_q',
+    # pip install django_extensions
+    # Refer below |
+    # https://django-extensions.readthedocs.io/en/latest/jobs_scheduling.html
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -134,6 +140,34 @@ STATIC_URL = '/static/'
 # Login info
 LOGIN_URL = reverse_lazy('login_urlpattern')
 LOGIN_REDIRECT_URL = '/'  # User page...
-LOGOUT_REDIRECT_URL = '/'
 
 # Logout info
+LOGOUT_REDIRECT_URL = '/'
+
+# Django_Q for periodic handling of database data -> Grid + Player
+# https://django-q.readthedocs.io/en/latest/schedules.html
+Q_CLUSTER = {
+    'name': 'BattleWeb101',
+    'workers': 2,
+    'recycle': 5,
+    'timeout': 180,
+    'compress': True,
+    'save_limit': 250,
+    'queue_limit': 500,
+    'cpu_affinity': 1,
+    'label': 'Django Q',
+    # Redis defaults
+    'redis': {
+        'host': 'localhost',
+        'port': 6379,
+        'db': 0,
+        'password': None,
+        'socket_timeout': None,
+        'charset': 'utf-8',
+        'errors': 'strict',
+        'unix_socket_path': None
+    }
+}
+
+
+
