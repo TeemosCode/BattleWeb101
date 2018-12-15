@@ -21,30 +21,36 @@
 
 </head>
 <body>
-    You have found your opponent!<br>
-    Name of opponent: {{ opponent.player_name }}
+    {% if player.player_bullets == 0%}
+        You have ran out of Bullets today!
+        Please come again Tomorrow to Shoot someone :)
+        <a href="{% url 'home_urlpattern' %}"> Head Home</a>
+    {% else %}
+        You have found your opponent!<br>
+        Name of opponent: {{ opponent.player_name }}
 
-    <form method="post" action="{% url 'attack_urlpattern' %}">
-        {% csrf_token %}
-        <input type="hidden" name="victim" value="{{ opponent.player_name }}">
-        <h10>X: </h10>
-        <select name="x">
-            <option value="0">0</option>
-            {% for _ in number_range %}
-                <option value="{{ forloop.counter }}">{{ forloop.counter }}</option>
-            {% endfor %}
-        </select>
-        <h10>Y: </h10>
-        <select name="y">
-            <option value="0">0</option>
-            {% for _ in number_range %}
-                <option value="{{ forloop.counter }}">{{ forloop.counter }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="ATTACK!">
-    </form>
+        <form method="post" action="{% url 'attack_urlpattern' %}">
+            {% csrf_token %}
+            <input type="hidden" name="victim" value="{{ opponent.player_name }}">
+            <h10>X: </h10>
+            <select name="x">
+                <option value="0">0</option>
+                {% for _ in number_range %}
+                    <option value="{{ forloop.counter }}">{{ forloop.counter }}</option>
+                {% endfor %}
+            </select>
+            <h10>Y: </h10>
+            <select name="y">
+                <option value="0">0</option>
+                {% for _ in number_range %}
+                    <option value="{{ forloop.counter }}">{{ forloop.counter }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="ATTACK!">
+        </form>
 
-    <a href="{% url 'search_opponent_urlpattern' %}">Search for another Opponent - GO!</a>
-    <a href="{% url 'home_urlpattern' %}"> HOME </a>
+        <a href="{% url 'search_opponent_urlpattern' %}">Search for another Opponent - GO!</a>
+        <a href="{% url 'home_urlpattern' %}"> HOME </a>
+    {% endif %}
 </body>
 </html>

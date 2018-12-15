@@ -94,6 +94,8 @@ class RandomSearchForOpponent(LoginRequiredMixin, View):
     def get(self, request):
         # Hard code during initial development to exclude the player him/ herself, don't want players hitting themselves
         self_excluded_player_query_list = Player.objects.exclude(player_name=request.user.username)
+
+        player_self = Player.objects.get(player_name=request.user.username)
         # .... Are there any better ways???
         # Making sure not to find a player that has already been sunk. (No more grids within the grid table for him/her)
         player_query_list = []
@@ -107,7 +109,8 @@ class RandomSearchForOpponent(LoginRequiredMixin, View):
         number_range = range(self.grid_lower_limit, self.grid_upper_limit)
         context = {
             "opponent": opponent,
-            'number_range': number_range
+            'number_range': number_range,
+            'player': player_self
         }
 
         return render(request, 'battleweb101/opponent.html', context=context)
