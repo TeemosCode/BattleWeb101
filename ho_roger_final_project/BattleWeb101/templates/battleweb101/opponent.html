@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Found Opponent!</title>
+    <script>
+    // This javascript is used to prevent users from backing user the browser back button to its prevous history
+    // of the same target. It forces the page to reload once it has been navigated to trough the browser history,
+    // making sure that it will always call on the random access function within the server so that players would
+    // not be able to focus hitting on the same victim!
+        window.addEventListener( "pageshow", function ( event ) {
+          var historyTraversal = event.persisted ||
+                                 ( typeof window.performance != "undefined" &&
+                                      window.performance.navigation.type === 2 );
+          if ( historyTraversal ) {
+            // Handle page restore.
+            window.location.reload();
+          }
+        });
+    </script>
+
 </head>
 <body>
     You have found your opponent!<br>
@@ -27,5 +43,8 @@
         </select>
         <input type="submit" value="ATTACK!">
     </form>
+
+    <a href="{% url 'search_opponent_urlpattern' %}">Search for another Opponent - GO!</a>
+    <a href="{% url 'home_urlpattern' %}"> HOME </a>
 </body>
 </html>

@@ -6,5 +6,18 @@
 </head>
 <body>
     <h1> Welcome to BattleWeb101 where people battle for fun everyday :)</h1>
+
+
+    {% if request.user.is_authenticated %}
+        <li><a href='{% url "logout_urlpattern" %}'><span class="glyphicon glyphicon-log-out"><span style = "font-size: 20px">LogOut</span></a></li>
+        <li><a href='{% url "search_opponent_urlpattern" %}'><span class="glyphicon glyphicon-log-out"><span style = "font-size: 10px">Search Opponent - GO!</span></a></li>
+        <li><a href="{% url 'hall_of_fame_urlpattern' %}">HALL of FAME!</a></li>
+        <li><a href="{% url 'hall_of_sunckers_urlpattern' %}">HALL of SUnCKERS!</a></li>
+        <li><a href="{% url 'player_status_urlpattern' %}">Status</a></li>
+    {% else %}
+        <li><a href="{% url 'signup_urlpattern' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{% url 'login_urlpattern' %}"><span class="glyphicon glyphicon-log-in"></span> LogIn</a></li>
+    {% endif %}
+
 </body>
 </html>

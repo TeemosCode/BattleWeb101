@@ -9,7 +9,8 @@ import random, itertools
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
-#
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from BattleWeb101.tokens import account_activation_token
 from .forms import SignUpForm, UserInfoForm
 # from mysite.core.tokens import account_activation_token
@@ -73,19 +74,11 @@ def activate(request, uidb64, token):
         player.player_name = user.username
         player.save()
         # Log the user into the system.
-        # Immediately log in user. They will be redirected to the webpage designated in the settings.py varible
+        # Immediately log in user and send them to the home page
         login(request, user)
         return render(request, 'battleweb101/home.html')
     else:
         return HttpResponse('Activation link is invalid!')
-
-
-##### Under development for Hardcoded player for testing ####
-
-"""
-PlayerName = Teemo
-ID = 1
-"""
 
 
 class Home(View):
@@ -94,7 +87,7 @@ class Home(View):
         return render(request, 'battleweb101/home.html')
 
 
-class RandomSearchForOpponent(View):
+class RandomSearchForOpponent(LoginRequiredMixin, View):
     grid_upper_limit = 10
     grid_lower_limit = 0
 
@@ -105,6 +98,7 @@ class RandomSearchForOpponent(View):
         # Making sure not to find a player that has already been sunk. (No more grids within the grid table for him/her)
         player_query_list = []
         for player in self_excluded_player_query_list:
+            # Only get players who have not been totally sunk! (Still his grid values for the day)
             if Grid.objects.filter(player__player_name=player.player_name).count() != 0:
                 player_query_list.append(player)
 
@@ -196,7 +190,7 @@ class HallOfFame(View):
         return render(request, 'battleweb101/HallOfFame.html', context=context)
 
 
-class ViewAttackedHistory(View):
+class ViewAttackedHistory(LoginRequiredMixin, View):
     """
     This view is associated with each individual player
     """
@@ -211,7 +205,7 @@ class ViewAttackedHistory(View):
         return render(request, 'battleweb101/attacked_history.html', context=context)
 
 
-class Attack(View):
+class Attack(LoginRequiredMixin, View):
     """
     Should contain only a POST method
     Used to attack a random searched user.
@@ -236,6 +230,7 @@ class Attack(View):
         # Attacker has no more bullets to shoot...
         if attacker.player_bullets == 0:
             print(attacker.player_name + " Has no more bullets left!")
+            #### This part should add some more cool business logic. Not just go boom!!!
             return render(request, 'battleweb101/home.html')
 
         hit = True
@@ -284,3 +279,13 @@ class Attack(View):
         }
 
         return render(request, 'battleweb101/attack_result.html', context=context)
+
+
+class PlayerStatus(LoginRequiredMixin, View):
+
+    def get(self, request):
+        player = Player.objects.get(player_name=request.user.username)
+        context = {
+            'player': player
+        }
+        return render(request, 'battleweb101/player_status.html', context=context)

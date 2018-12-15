@@ -1,7 +1,6 @@
 from django.urls import path
 from django.conf.urls import url
 
-from BattleWeb101 import views
 from BattleWeb101.views import (
     Home,
     RandomSearchForOpponent,
@@ -10,8 +9,9 @@ from BattleWeb101.views import (
     HallOfFame,
     ViewAttackedHistory,
     Attack,
-    sign_up,
+    PlayerStatus,
 
+    sign_up,
     activate,
 )
 
@@ -25,6 +25,7 @@ urlpatterns = [
     path('hall_of_fame/', HallOfFame.as_view(), name='hall_of_fame_urlpattern'),
     path('attacked_history/', ViewAttackedHistory.as_view(), name='attack_history_urlpattern'),
     path('attack/', Attack.as_view(), name='attack_urlpattern'),
+    path('status/', PlayerStatus.as_view(), name='player_status_urlpattern'),
 
     path('signup/', sign_up, name='signup_urlpattern'),
     # path('activate/(<uidb64>[0-9A-Za-z_\-]+)/(<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/',
