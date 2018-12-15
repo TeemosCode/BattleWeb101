@@ -1,0 +1,14 @@
+<h2 style="text-align: right">Login</h2>
+  <form class="modal-content animate" method='post' style="background-color: #FF8800; ">
+  	{% csrf_token %}
+    <div class="container">
+      <label for="uname"><b>User Name</b></label>
+      {{ form.username }}
+      <label for="psw"><b>Password</b></label>
+      {{ form.password }}
+      <button type="submit">Login</button>
+
+        <a href = '{% url "signup_urlpattern" %}'> <button type="button" class="btn btn-primary"><span style="font-size:11px">Not Signed Up yet? SIGN UP here!</button></a>
+        <a href = '{% url "password_reset" %}'> <button type="button" class="btn btn-danger"><span>Change Password</button></a>
+    </div>
+  </form>

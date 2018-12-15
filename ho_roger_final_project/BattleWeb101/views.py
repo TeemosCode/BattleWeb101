@@ -28,6 +28,8 @@ def sign_up(request):
     if form.is_valid():
         user = form.save(commit=False)
         user.is_active = False
+        username = form.cleaned_data['username']
+        user.username = username
         user.save()
         current_site = get_current_site(request)
         mail_subject = 'Activate Your BattleWeb101 Account'
@@ -93,10 +95,12 @@ class Home(View):
 
 
 class RandomSearchForOpponent(View):
+    grid_upper_limit = 10
+    grid_lower_limit = 0
 
     def get(self, request):
         # Hard code during initial development to exclude the player him/ herself, don't want players hitting themselves
-        self_excluded_player_query_list = Player.objects.exclude(player_name='Teemo')
+        self_excluded_player_query_list = Player.objects.exclude(player_name=request.user.username)
         # .... Are there any better ways???
         # Making sure not to find a player that has already been sunk. (No more grids within the grid table for him/her)
         player_query_list = []
@@ -106,8 +110,13 @@ class RandomSearchForOpponent(View):
 
         rand_index = random.randint(0, len(player_query_list) - 1)
         opponent = player_query_list[rand_index]
+        number_range = range(self.grid_lower_limit, self.grid_upper_limit)
+        context = {
+            "opponent": opponent,
+            'number_range': number_range
+        }
 
-        return render(request, 'battleweb101/opponent.html', context={"opponent": opponent})
+        return render(request, 'battleweb101/opponent.html', context=context)
 
 # Accessing all grid data for a certain player through foreign key | BELOW
 # Grid.objects.filter(player__player_name='Shroom')
@@ -154,7 +163,7 @@ class RenewEverydayData(View):
             list_with_total_grid_number_coordinates = grid_x_y_combination_list[:self.total_grid_number]
             # loop through the generated x,y pair to insert into the Grid table for the player
             for x, y in list_with_total_grid_number_coordinates:
-                grid = Grid(player=player, grid_x=x, grid_y = y)
+                grid = Grid(player=player, grid_x=x, grid_y=y)
                 grid.save()
 
     def get(self, request):
@@ -193,7 +202,7 @@ class ViewAttackedHistory(View):
     """
     def get(self, request):
         # Currently still associated with hardcoded code - Teemo
-        player_self_object = Player.objects.get(player_name="Teemo")
+        player_self_object = Player.objects.get(player_name=request.user.username)
 
         list_of_attacks = AttackedHistory.objects.filter(victim=player_self_object).order_by('-created_time')
         context = {
@@ -204,19 +213,25 @@ class ViewAttackedHistory(View):
 
 class Attack(View):
     """
+    Should contain only a POST method
     Used to attack a random searched user.
     Yet because it is still currently under development, we will hard code the target ID and attacker first, as well
     as the grid_x and grid_y coordinates.
     Would need to add any activity to the Attack History!
+
+    In order to hide the attack information from users, I will not use pass the variables from the templates to the
+    views with the url links as users could follow a certain pattern to attack others. Instead, I will embed the
+    information into a form and use POST to handle it instead. --> request.POST.get('name variable')
     """
     # It should be POST...
     # But right now we use GET to test first since everything is hardcoded
-    def get(self, request):
+    def post(self, request):
 
-        # Victim hard coded to be Karthus
-        victim = Player.objects.get(player_name="Karthus")
-        # The attacker will still be Teemo - Hard coded
-        attacker = Player.objects.get(player_name="Teemo")
+        # Victim - accessed through request.POST.get('victim')   name = "victim" in the form
+        victim_name = request.POST.get('victim')
+        victim = Player.objects.get(player_name=victim_name)
+        # The attacker of the request
+        attacker = Player.objects.get(player_name=request.user.username)
 
         # Attacker has no more bullets to shoot...
         if attacker.player_bullets == 0:
@@ -230,8 +245,8 @@ class Attack(View):
         current_attack_history = AttackedHistory()
 
         # Hard coded coordinates for attack
-        x = 1
-        y = 2
+        x = request.POST.get('x')
+        y = request.POST.get('y')
 
         # Check if hit <---- Still hard Coded Below!! (WOuld we grab the Player Object (Like currently)? Player Name ? or Player ID???)
         attacked_result = Grid.objects.filter(player=victim, grid_x=x, grid_y=y)
@@ -265,9 +280,7 @@ class Attack(View):
             'x': x,
             'y': y,
             'victim': victim,
-            'attacker': attacker
+            'attacker': attacker,
         }
 
         return render(request, 'battleweb101/attack_result.html', context=context)
-
-
