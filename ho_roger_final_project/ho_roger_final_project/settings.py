@@ -115,6 +115,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+##### Email Settings ####
+#### Info from stackoverflow : https://stackoverflow.com/questions/6914687/django-sending-email #####
+EMAIL_HOST = 'smtp.gmail.com' # using gmail # smtp for gmail
+EMAIL_HOST_USER = 'uiucischool@gmail.com'
+EMAIL_HOST_PASSWORD = 'uiucischool1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

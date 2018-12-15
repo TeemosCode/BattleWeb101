@@ -1,12 +1,81 @@
+from django.contrib.auth import login
+from django.contrib.auth.models import User
+from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
 # Used for class based views
 from django.views import View
 import random, itertools
+# For User creation and Signup with email confirmation
+from django.utils.encoding import force_bytes, force_text
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.template.loader import render_to_string
+#
+from BattleWeb101.tokens import account_activation_token
+from .forms import SignUpForm, UserInfoForm
+# from mysite.core.tokens import account_activation_token
+
 from .models import (
     Player,
     Grid,
     AttackedHistory,
 )
+
+
+def sign_up(request):
+
+    # Would still need to implement and handle "UserName Already Used" situations in the future!!!
+    form = UserInfoForm(request.POST)
+    if form.is_valid():
+        user = form.save(commit=False)
+        user.is_active = False
+        user.save()
+        current_site = get_current_site(request)
+        mail_subject = 'Activate Your BattleWeb101 Account'
+        message = render_to_string('battleweb101/account_activation_email.html', {
+            'user': user,
+            'domain': current_site.domain,
+            'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
+            'token': account_activation_token.make_token(user),
+        })
+        user.email_user(mail_subject, message) # Sends email to the provided email from the user
+        # username = form.cleaned_data['username']
+        # to_email = username + '@illinois.edu'  # Illinois mail combining username (NetID) with '@illinois.edu'
+        # email = EmailMessage(
+        #     mail_subject, message, to=[to_email]
+        # )
+        # email.send()
+        # return render(request, 'battleweb101/account_activation_email.html')
+        print("Signed Up with email: " + user.email)
+        return HttpResponse("Please go to your email to activate your BattleWeb101 account!")
+    else:
+        form = UserInfoForm()
+
+    context = {'form': form}
+    return render(request, 'battleweb101/signup.html', context)
+
+
+def activate(request, uidb64, token):
+    try:
+        uid = force_text(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist) as error:
+        print(error)
+        user = None
+
+    if user is not None and account_activation_token.check_token(user, token):
+        user.is_active = True
+        user.save()
+
+        ## Save the User information into Player table
+        player = Player()
+        player.player_name = user.username
+        player.save()
+        # Log the user into the system.
+        # Immediately log in user. They will be redirected to the webpage designated in the settings.py varible
+        login(request, user)
+        return render(request, 'battleweb101/home.html')
+    else:
+        return HttpResponse('Activation link is invalid!')
 
 
 ##### Under development for Hardcoded player for testing ####

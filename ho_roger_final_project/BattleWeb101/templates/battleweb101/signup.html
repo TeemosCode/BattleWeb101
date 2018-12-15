@@ -1,0 +1,58 @@
+{#{% extends 'root.html' %}#}
+{#{% load static %}#}
+{##}
+{#{% block more_links %} #}
+{#<link rel = 'stylesheet' type='text/css' href="{% static 'registration/login_authentication.css' %}">#}
+{#<style> #}
+{#  label {color:#E84A27;}#}
+{#</style>#}
+{#{% endblock %}#}
+
+{##}
+{#{% block title %}  iSchool Whiteboard Coding Sign Up {% endblock %}#}
+{#{% block navbar %} {% endblock %}#}
+{##}
+{#{% block content-body %}#}
+style="background-color: #13294b;"
+
+<h2 style="text-align: right; width: 200px; float:right;">Sign Up</h2>
+  <form class="modal-content animate" method='post' >
+    {% csrf_token %}
+    <div class="container">
+      <label for="uname"><b>NetID</b></label>
+      {{form.username}}
+      <label for="psw"><b>First Name</b></label>
+      {{form.first_name}}
+      <label for="psw"><b>Last Name</b></label>
+      {{form.last_name}}
+      <label for="psw"><b>Password</b></label>
+      {{form.password1}}
+      <label for="psw"><b>Password confirmation</b></label>
+      {{form.password2}}
+
+        <label for="psw"><b>Email</b></label>
+      {{form.email}}
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+{#{% endblock %}#}
+{##}
+{#{% block middle_info %}#}
+{#  <div class="col-md-3 col-lg-4 col-xl-3 mb-4" style="color: #13294b">#}
+{#      <h6 class="text-uppercase font-weight-bold">#}
+{#          <strong style="color: #E84A27; font-size: 50px">RULES!</strong>#}
+{#      </h6>#}
+{#      <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">#}
+{#      <p align = "justify">#}
+{#        <ol>#}
+{#          <li>NetID would be used to send an Authentication Verification Email to your UIUC email</li>#}
+{#          <li>Your password can't be too similar to your other personal information</li>#}
+{#          <li>Your password must contain at least 8 characters</li>#}
+{#          <li>Your password can't be a commonly used password</li>#}
+{#          <li>Your password can't be entirely numeric</li>#}
+{#          <li>For Password verification, enter the same password as before</li> #}
+{#        </ol>#}
+{#        <p align = "justify"><strong> You would receive a confirmation email AFTER signing up. Please head to your UIUC email to click on the Verification link in order to ACTIVATE your account for the iSchool registration system ! </strong></p>#}
+{#  </div>#}
+{#  <!--/.Second column-->#}
+{#{% endblock %}#}

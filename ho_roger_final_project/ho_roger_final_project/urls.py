@@ -41,5 +41,6 @@ urlpatterns = [
     #      name='about_urlpattern'),
 
     path('admin/', admin.site.urls),
+    # path('', include('BattleWeb101.urls', namespace='BattleWeb101')),
     path('', include('BattleWeb101.urls')),
 ]
