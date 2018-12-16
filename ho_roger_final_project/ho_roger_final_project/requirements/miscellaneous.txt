@@ -1,0 +1,33 @@
+Some data are already provided.
+
+When a user confirms his signup through the email verification link, their data would be saved into the Player table of the database and have the fields populated.
+
+It has not been tested yet. But I have added in a scheduling package - Django-extensions and have the script to renew the whole database everyday under the 'daily' directory.
+It's a script that sends a GET signal to the RenewEverydayData View class in Django.
+REFER TO:
+# https://django-extensions.readthedocs.io/en/latest/jobs_scheduling.html#setup
+# https://www.geeksforgeeks.org/get-post-requests-using-python/
+
+It has been tested that the View does exactly what it's suppose to do. As for the package, I am not so sure about it yet.
+
+But following through its documentation, nee to run the following in the command line:
+
+# 1. Activate virtual env -> conda.
+2. The command line
+# source activate /anaconda3/envs/IS590WFO_final_project
+# python manage.py runjob renew_grid_player_data
+
+
+P.S (Django Schedule was supposed to be used first, had it set up and configured and everything. But was stuck on the redis server part. So instead went for the Django-extensions package)
+Refer To:
+# https://django-q.readthedocs.io/en/latest/schedules.html
+# https://django-q.readthedocs.io/en/latest/install.html
+# https://django-q.readthedocs.io/en/latest/configure.html#redis-configuration
+
+
+
+
+# Test Data:
+Account Name: Teemo
+Password: teemomustdie000
+(Forgot about the other ones lol)

@@ -1,0 +1,21 @@
+BattleWeb101
+
+
+The BattleWeb101 is an online interactive game where each Player gets randomly assigned 20 different grids consisted of X and Y coordinates, each within the range from 0 to 10 (A total of 101 integer numbers) by the system each day.
+
+Every Player gets a chance to randomly search for a target (another Player) 3 times in the system each day. Once a target is found, the user can have a chance of randomly choosing the numbers within the range of 0 ~ 100 for both X and Y coordinates in order to guess an existing target's system-generated grid for that day. If guessed correctly, the player gets "Hit Points" as an award. Hit Points is cumulative and will only grow in size forever. It is used to display as an honor of ones ability to hit another Player's grid.
+
+Each Player has a history log that can show which Player tried to hit their grids each day and whether or not they have successfully hit any grids.
+
+If a Player has all his/her 20 available grids hit within a day, he/she gets a "TheSUCnKER" title to display the bad luck of being targeted and loosing all grids within a day.
+
+The system also has a Hall Of Fame to show the top 10 Players with the highest Hit Points.
+The system also has a Hall Of SUCnKERS to show the top 10 Players with the highest TheSUCnKER title counts.
+
+Each 20 grid and the 3 random chances for searching targets are renewed everyday by the system for each Player.
+
+Each Player would need to provide to the BattleWeb with their names, e-mail, account name and password in order to signup for playing.
+
+
+
+Everything is still under development. Some may tend to change in the future.

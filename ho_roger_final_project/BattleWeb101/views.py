@@ -205,7 +205,7 @@ class ViewAttackedHistory(LoginRequiredMixin, View):
     This view is associated with each individual player
     """
     def get(self, request):
-        # Currently still associated with hardcoded code - Teemo
+        
         player_self_object = Player.objects.get(player_name=request.user.username)
 
         list_of_attacks = AttackedHistory.objects.filter(victim=player_self_object).order_by('-created_time')
@@ -253,7 +253,7 @@ class Attack(LoginRequiredMixin, View):
         x = request.POST.get('x')
         y = request.POST.get('y')
 
-        # Check if hit <---- Still hard Coded Below!! (WOuld we grab the Player Object (Like currently)? Player Name ? or Player ID???)
+        # Check if hit
         attacked_result = Grid.objects.filter(player=victim, grid_x=x, grid_y=y)
         # If length is 0, it means it hit nothing (The victim does not have that grid_x & grid_y)
         if len(attacked_result) == 0:
