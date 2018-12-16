@@ -16,7 +16,7 @@ Including another URstaLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView, TemplateView
-from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
 
 urlpatterns = [
@@ -35,15 +35,15 @@ urlpatterns = [
          LogoutView.as_view(),
          name='logout_urlpattern'
          ),
-    #
-    # path('about/',
-    #      TemplateView.as_view(
-    #          template_name='courseinfo/about.html'),
-    #      name='about_urlpattern'),
 
-    path('password_reset', PasswordResetView, name="password_reset"),
 
     path('admin/', admin.site.urls),
     # path('', include('BattleWeb101.urls', namespace='BattleWeb101')),
     path('', include('BattleWeb101.urls')),
+
+    ## Authentication -- Email Password Reset !!! Django 2.0.1 Changed alot of this authentication stuff. Relook at this when Time permits!
+    path('password_reset', PasswordResetView, name="password_reset"),
+    path('password_reset/done', PasswordResetDoneView.as_view(), name='password_reset_done'),
+    path('reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset/done/', PasswordResetCompleteView.as_view(), name="password_reset_complete"),
 ]

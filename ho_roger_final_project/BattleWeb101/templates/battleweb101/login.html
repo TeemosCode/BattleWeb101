@@ -35,8 +35,9 @@
       {{ form.password }}
       <button type="submit">Login</button>
 
-        <a href = '{% url "signup_urlpattern" %}'> <button type="button" class="btn btn-primary"><span style="font-size:11px">Not Signed Up yet? SIGN UP here!</button></a>
-        <a href = '{% url "password_reset" %}'> <button type="button" class="btn btn-danger"><span>Change Password</button></a>
+        <a href = '{% url "signup_urlpattern" %}'> <button type="button" class="btn btn-primary"><span style="font-size:11px">Not a Battler yet? Create Account Here!</button></a>
+{#        This is currently still under investigation as Django 2.0.1 Changed alot about the built-in authentication stuff --> Next thing to do... When time permits#}
+{#        <a href = '{% url "password_reset" %}'> <button type="button" class="btn btn-danger"><span>Change Password</button></a>#}
     </div>
   </form>
 
