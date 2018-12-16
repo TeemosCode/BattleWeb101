@@ -27,14 +27,9 @@
 {% block title %}  BattleWeb101 Opponent {% endblock %}
 
 {% block content-body %}
-{#<div style="text-align:center; ">#}
-{#  <span style="background-color: #13294b; color: #E84A27; font-size: 30px; border: solid">#}
-{#    Your Account Status#}
-{#  </span>#}
-{#</div>#}
 
 <div class="container col-md-6 col-lg-8 col-xl-6 mb-8" id="whiteboard_context" style="background-color: white; "><!-- text-center   height: 500px-->
-<h2 class="text-center" style="margin-top: 5px; margin-bottom: 5px;"> Your Account Status </h2>
+<h2 class="text-center" style="margin-top: 5px; margin-bottom: 5px;"> Your Random Search </h2>
 
         <div class="col-md-2"></div>
 
@@ -84,6 +79,40 @@
 
 </div>
 {% endblock %}
+
+
+
+
+
+
+
+{% block ischool_intro %}
+	<div class="col-md-6 col-lg-12 col-xl-6 mb-8" >
+	    <h6 class="text-uppercase font-weight-bold">
+	        <strong>What do you do for your search?</strong>
+	    </h6>
+	            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	    <p align = "center">
+            The search results would randomly pick another player within the system who has not yet been Sunk. You will need to choose the X and Y coordinate value from
+            their individual drop-down menu to represent the coordinates you choose to shoot at your opponent.
+        </p>
+	   		   	<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+	  <p align = "center">
+          As long as you still have your bullets for the day, you can continuously search for other opponents until you find one who you really want to shoot at.
+          If you ran out of your allowed bullets for today, you would no longer be able to find any more opponents until the next day when you're bullets in your arsenal has been reset.
+          When you successfully hit on your opponent, you would be directed to a result page and see the details of how much life your opponent has.
+          If you successfully gave your opponent the last hit and Sunk them. Congratulations! You have just achieved something incredible and it would be saved into your personal information!
+      </p>
+	</div>
+{% endblock %}
+<!--/.First column-->
+
+{% block middle_info %}
+	<!-- make it empty -->
+{% endblock %}
+
+
 
 
 

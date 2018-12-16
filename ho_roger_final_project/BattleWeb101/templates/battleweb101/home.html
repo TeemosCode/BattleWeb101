@@ -75,31 +75,38 @@
 {% block ischool_intro %}
 	<div class="col-md-6 col-lg-12 col-xl-6 mb-8" >
 	    <h6 class="text-uppercase font-weight-bold">
-	        <strong>What are these coding interviews like, and how should I act?</strong>
+	        <strong>Things to do on BattleWeb101</strong>
 	    </h6>
-	    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-	    <p align = "justify">There are many online videos that show one or more solutions to specific whiteboard coding style problems, but most don’t show a realistic interview coding situation. Even worse, some unknowingly show how to interview someone poorly. The best example I have found is this mock interview at Google below. Both participants demonstrate good communication, Edgar “thinks out loud” very well, tries potential solutions visually before writing any code, and together they iterate to improve the solutions.
-	   	</p>
-	   		   	<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	    <p>
+            <ol>
+                <li align = "justify">>
+                    <span style="color: dodgerblue">Seach Oppoenet GO!:</span>
+                    This allows you to randomly search for other players that are also on BattleWeb101 who have not yet been Sunk for the day.
+                    After each search, you could decide to shoot them as long as you still have bullets. Fight on!!!
+                </li>
 
-	  <div class="video_holder">
-  	  <iframe width="700" height="400"
-  			src="https://www.youtube.com/embed/XKu_SEDAykw">?rel=0
-  		</iframe>
-  		<br>
-  		<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-  		<span style="text-align: center; font-size: 18px"> Scroll down below for other video links that may provide you furthur insight to whiteboard coding</span>
-  	   	{% if video_links%}
-  			<h4> Videos Links </h4>
-  		    <ul>
-  		    {% for links in video_links %}
-  		        <li><a href="{{ links.url }}" target="_blank">{{ links.video_name }}</a></li>
-  		    {% endfor %}
-  		    </ul>
-  		  {% else %}
-  		    <p>No videos are available.</p>
-  		  {% endif %}
-	  </div>
+                <li align = "justify">>
+                    <span style="color: dodgerblue">Hall Of Fame:</span>
+                    You will be shown a list of the top 10 best shooters with the best accuracy on BattleWeb101. Why not try to get on that list as well, let's go!
+                </li>
+
+                <li align = "justify">>
+                    <span style="color: dodgerblue">Hall Of SUnCKERS:</span>
+                    You will be shown a list of the top 10 players with the most SUnCKER Points. (Take off the 'n' character to unravel the hidden meaning!)
+                </li>
+
+                <li align = "justify">>
+                    <span style="color: dodgerblue">Player Status: </span> Shows the details of your account information.
+                </li>
+
+                <li align = "justify">>
+                    <span style="color: dodgerblue">Attacked History:</span> Shows you a list of all recorded attacks others have launched against you since the day you
+                    have registered to become a part of the BattleWeb101!
+                </li>
+            </ol>
+        </p>
+	   		   	<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 
 	</div>
 {% endblock %}
