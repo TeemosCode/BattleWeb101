@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cca5c13-0374-4c36-9ba7-b250b5e0b1d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ho_roger_final_project/requirements/miscellaneous.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleWeb101/migrations/0007_user_and_player_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ho_roger_final_project/requirements/gnereate_username_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ho_roger_final_project/requirements/user_name_files" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleWeb101/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleWeb101/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ho_roger_final_project/requirements/miscellaneous.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ho_roger_final_project/requirements/miscellaneous.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ho_roger_final_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ho_roger_final_project/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ho_roger_final_project$0007_user_and_player_data.coverage" NAME="0007_user_and_player_data Coverage Results" MODIFIED="1544935440667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BattleWeb101/migrations" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -29,63 +35,46 @@
           <entry key="Django Console" value="1814" />
           <entry key="css" value="19" />
           <entry key="html" value="10381" />
-          <entry key="py" value="13292" />
-          <entry key="py@ho_roger_final_project" value="881" />
-          <entry key="txt" value="1210" />
+          <entry key="py" value="14148" />
+          <entry key="py@ho_roger_final_project" value="914" />
+          <entry key="txt" value="1417" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="19" />
-          <entry key="CommandLine" value="783" />
+          <entry key="CommandLine" value="816" />
           <entry key="HTML" value="10381" />
-          <entry key="PLAIN_TEXT" value="1308" />
-          <entry key="Python" value="15106" />
+          <entry key="PLAIN_TEXT" value="1515" />
+          <entry key="Python" value="15962" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
           <entry key="html" value="42" />
-          <entry key="py" value="30" />
+          <entry key="py" value="33" />
           <entry key="txt" value="3" />
+          <entry key="user_name_files" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
           <entry key="HTML" value="42" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="30" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="33" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/password_reset_complete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="88" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/password_reset_done.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="28" column="99" selection-start-line="28" selection-start-column="99" selection-end-line="28" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state relative-caret-position="375">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding>
                 <element signature="e#649#681#0" expanded="true" />
               </folding>
@@ -94,19 +83,57 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="170">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ho_roger_final_project/requirements/miscellaneous.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/migrations/0007_user_and_player_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#49#89#0" expanded="true" />
+                <marker date="1544936234165" expanded="true" signature="1979:2292" ph="..." />
+                <marker date="1544936234165" expanded="true" signature="2334:2507" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BattleWeb101/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ho_roger_final_project/requirements/user_name_files">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1650" selection-end-column="1650" />
             </state>
           </provider>
         </entry>
@@ -127,10 +154,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1464">
-              <caret line="207" column="8" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="8" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="43" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
                 <marker date="1544927447002" expanded="true" signature="3215:3304" ph="..." />
                 <marker date="1544927447002" expanded="true" signature="11660:11669" ph="..." />
                 <marker date="1544927447002" expanded="true" signature="11891:12014" ph="..." />
@@ -144,27 +170,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/password_reset_confirm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BattleWeb101/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -236,12 +241,13 @@
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/password_reset_done.html" />
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/password_reset_complete.html" />
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/password_reset_confirm.html" />
-        <option value="$PROJECT_DIR$/ho_roger_final_project/urls.py" />
         <option value="$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html" />
         <option value="$PROJECT_DIR$/ho_roger_final_project/requirements/introduction.txt" />
         <option value="$PROJECT_DIR$/BattleWeb101/views.py" />
         <option value="$PROJECT_DIR$/BattleWeb101/jobs/daily/renew_grid_player_data.py" />
         <option value="$PROJECT_DIR$/ho_roger_final_project/requirements/miscellaneous.txt" />
+        <option value="$PROJECT_DIR$/BattleWeb101/migrations/0007_user_and_player_data.py" />
+        <option value="$PROJECT_DIR$/ho_roger_final_project/urls.py" />
       </list>
     </option>
   </component>
@@ -279,46 +285,7 @@
               <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
               <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
-              <item name="daily" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="battleweb101" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ho_roger_final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="BattleWeb101" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="battleweb101" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ho_roger_final_project" type="b2602c69:ProjectViewProjectNode" />
@@ -347,6 +314,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BattleWeb101/migrations" />
       <recent name="$PROJECT_DIR$/BattleWeb101/templates/battleweb101" />
       <recent name="$PROJECT_DIR$/BattleWeb101/templates" />
       <recent name="$PROJECT_DIR$/BattleWeb101/static/battleweb101" />
@@ -370,7 +338,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.0007_user_and_player_data">
+    <configuration name="0007_user_and_player_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ho_roger_final_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BattleWeb101/migrations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BattleWeb101/migrations/0007_user_and_player_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ho_roger_final_project" type="Python.DjangoServer" factoryName="Django server">
       <module name="ho_roger_final_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -394,6 +384,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.ho_roger_final_project" />
+      <item itemvalue="Python.0007_user_and_player_data" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.0007_user_and_player_data" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -424,16 +423,16 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22161795" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@ho_roger_final_project" weight="0.19489796" />
+      <window_info anchor="bottom" id="manage.py@ho_roger_final_project" visible="true" weight="0.3551515" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.39151517" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49898028" weight="0.39151517" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5010197" side_tool="true" weight="0.39151517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,18 +497,6 @@
     <entry file="file://$PROJECT_DIR$/BattleWeb101/migrations/0006_auto_20181214_0905.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1544825341937" expanded="true" signature="1275:1401" ph="..." />
-            <marker date="1544825341937" expanded="true" signature="2079:2793" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda3/envs/IS590WFO_final_project/lib/python3.6/site-packages/django/contrib/auth/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -540,16 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="e#649#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BattleWeb101/templates/battleweb101/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -771,19 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="207" column="8" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1544927447002" expanded="true" signature="3215:3304" ph="..." />
-            <marker date="1544927447002" expanded="true" signature="11660:11669" ph="..." />
-            <marker date="1544927447002" expanded="true" signature="11891:12014" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,8 +754,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ho_roger_final_project/requirements/miscellaneous.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="255">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="43" />
+          <folding>
+            <marker date="1544927447002" expanded="true" signature="3215:3304" ph="..." />
+            <marker date="1544927447002" expanded="true" signature="11660:11669" ph="..." />
+            <marker date="1544927447002" expanded="true" signature="11891:12014" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/migrations/user_name_files">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ho_roger_final_project/requirements/user_name_files">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1650" selection-end-column="1650" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/migrations/0007_user_and_player_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#49#89#0" expanded="true" />
+            <marker date="1544936234165" expanded="true" signature="1979:2292" ph="..." />
+            <marker date="1544936234165" expanded="true" signature="2334:2507" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleWeb101/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ho_roger_final_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding>
+            <element signature="e#649#681#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

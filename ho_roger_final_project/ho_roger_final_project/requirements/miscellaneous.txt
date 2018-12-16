@@ -17,6 +17,10 @@ But following through its documentation, nee to run the following in the command
 # source activate /anaconda3/envs/IS590WFO_final_project
 # python manage.py runjob renew_grid_player_data
 
+@@@!!IMPORTANT
+---REMBMER TO RUN THIS FIRST or to manually make a request to the View URL which is "daily_update/" to Prepopulate the data first (In the Grid table for every player)!!!!---
+@@@@@@
+
 
 P.S (Django Schedule was supposed to be used first, had it set up and configured and everything. But was stuck on the redis server part. So instead went for the Django-extensions package)
 Refer To:

@@ -44,6 +44,6 @@ urlpatterns = [
     ## Authentication -- Email Password Reset !!! Django 2.0.1 Changed alot of this authentication stuff. Relook at this when Time permits!
     path('password_reset', PasswordResetView, name="password_reset"),
     path('password_reset/done', PasswordResetDoneView.as_view(), name='password_reset_done'),
-    path('reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset/(P<uidb64>[0-9A-Za-z_\-]+)/(P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', PasswordResetCompleteView.as_view(), name="password_reset_complete"),
 ]
