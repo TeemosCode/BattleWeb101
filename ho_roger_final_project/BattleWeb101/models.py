@@ -52,8 +52,8 @@ class Grid(models.Model):
 
 
 class AttackedHistory(models.Model):
-    attacker = models.ForeignKey(Player, related_name='attacker', on_delete=models.PROTECT)
-    victim = models.ForeignKey(Player, related_name='victim', on_delete=models.PROTECT)
+    attacker = models.ForeignKey(Player, related_name='attacker', on_delete=models.CASCADE)  # This is interesting...
+    victim = models.ForeignKey(Player, related_name='victim', on_delete=models.CASCADE)  # Has something to do with migration
     created_time = models.DateTimeField(auto_now_add=True)
     hit = models.BooleanField(default=False)
     grid_x_hit = models.IntegerField(null=True)

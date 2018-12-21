@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 from django.contrib.auth.models import User
-from BattleWeb101.models import Player
+from BattleWeb101.models import Player, Grid
 
 
 user_string = "Fillister,Cosmogony,Cubiform,Obreption,CuchingUdal,Catabaptism,Xenagogue,Joe_dGid,Pcm244Eagre,Illiquation,Luminous,Luminous,Antechapel,Plainstones,Glottogonic,Abderian,Acrimony,Tuatara,Abattoir,PolydactGizmo,Fluorimeter,Singult,Grinagog,Theatrocracy,Patefaction,Oxfordlie_b,Ruckuslexy123,Flocculate,Salariat,Catechumen,Affrayer,Abderian,Rosarian,Aardwolf,Saprobic,Abattoir,Gastromancy,Gribble,Lautitious,Abattoir,Goombah,RyanholSlurry,DarthdrobShart,Bilirubin,Rhysw13Zonked,Tubthumper,Kinkajou,Petcock,Anomalous,BugsbomJiggle,Xmr_videoYips,Eggcorn,CandibYowza,Napiform,Hodgepodge,XxnovamSnooty,Demitasse,Wisecrack,Scootch,Rendezvous,Cowabunga,Mudpuppy,Blockhead,Skirtgtang,Flippant,Lococbox,Kudzurik00,Skullduggery,Quisling,Alooftrew,Scrivener,Kahunario101,Egghead,Bozovmog,Bitched,Craigtasxd_yt,Malarkey,Quicksticks,Befuddled,Blabbermouth,Ambulatory,Abature,Alliaceous,Gaumless,Cockshy,Agrypnotic,Fishwife,Litotes,Conspue,Abattoir,Rugible,Paragnosis,HeroinTwee,Aardwolf,Euphuism,Bacciferous,LingprankSable,Aardwolf,Sycomancy,Brevicaudate,Abattoir,Redeuean,Pejorate,Abattoir,Puceruitcz,Judrien69,Coryphaeus,Gangplank,Abradant,Simplex,Blandiloquy,Tarradiddle,Supernal,Gromatic,Reprography,Luminous,Hypaethral,Supraliminal,Hecatomb,Snastelis08,Ausfahrt,PhintoSchlep,Jeroboam,Orgulous,Scuttlebutt,Britches,Rouleau,Hirsute,Couscous,Rinderpest,Shenanigans,BarbchefTeepee,Cattitude,Ziggurat,Lugubrious,DelgadWhoop,MochadAgog,SagoFracas,Whirligig,Currish,Fizgigtboyq,Finagle,Didgeridoo,Globetrotter,Shabang,HoiPolloi,Thespian,Pedagogue,Pomposity,Ululation,Hotbedttom0,Miffedlpowns,Gazpacho,Shalwar,ShihTzu,Behelmeted,Dunderhead,Tumultuous,Hillbilly,Mudpuppy"
@@ -28,8 +28,13 @@ def remove_user_data(apps, schema_editor):
     for name in USERS:
         user = User.objects.get(username=name)
         user.delete()
+        ## Because of reference through a protected foreign key between Grid and Player, delete all grid data first.
+        # Delete all grids
+        Grid.objects.all().delete()
+        # Then delete players
         player = Player.objects.get(player_name=name)
         player.delete()
+
 
 
 class Migration(migrations.Migration):

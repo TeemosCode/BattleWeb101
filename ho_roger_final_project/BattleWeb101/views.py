@@ -228,7 +228,6 @@ class Attack(LoginRequiredMixin, View):
     information into a form and use POST to handle it instead. --> request.POST.get('name variable')
     """
     # It should be POST...
-    # But right now we use GET to test first since everything is hardcoded
     def post(self, request):
 
         # Victim - accessed through request.POST.get('victim')   name = "victim" in the form
